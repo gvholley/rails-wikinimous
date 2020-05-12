@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>New article</h1>
+  <%= form_for(@article) do |form| %>
+    <div class="form-group">
+      <strong><%= form.label :title %></strong>
+      <%= form.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <strong><%= form.label :content %></strong>
+      <%= form.text_field :content, class: 'form-control' %>
+    </div>
+
+    <div class="input"><%= form.submit class: 'btn btn-primary' %></div>
+  <% end %>
+  <div><%= link_to "Back to list", articles_path %></div>
+</div>
